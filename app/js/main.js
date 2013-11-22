@@ -17,6 +17,13 @@ var showDynamic = function(el){
    $(el).fadeOut(0).removeClass('visuallyhidden').fadeIn(1000);
 }
 
+var reshoot = function(){
+  $("#reshoot").hide();
+  $("#shoot").show();
+  $("#main").load("picture.html", function(data) {
+      customload(data);
+  });
+}
 
 var customload = function(data) {
   $.each($(data).filter('*[data-click]'), function(index, el) {
@@ -87,12 +94,14 @@ var showForm = function(){
 
 
 var restart = function(){
+  $("#reshoot").hide();
   hideDynamic("#thanks");
   $(".keyboard").remove();
   $("#main").load("start.html", function(data) {
       customload(data);
   });
-}
+};
+
 
 $(function() {
     var $listOfAutoload = $('*[data-autoload]');
@@ -100,6 +109,7 @@ $(function() {
         var $el = $(el);
         $($el.data('target')).load($el.data('autoload'), function(data) {
           customload(data);
+          $("#reshoot").hide();
         });
     });
 });
