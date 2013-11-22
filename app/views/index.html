@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Red Square</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/html5bp.css">
+    <link rel="stylesheet" href="../css/animation.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/settings.js"></script>
+    <script src="../js/vendor/jquery-2.0.3.min.js"></script>
+    <script src="../js/vendor/socket.io-client.js"></script>
+    <script src="../js/vendor/transition.js"></script>
+    <script src="../js/vendor/jquery.backstretch.min.js"></script>
+    <script src="../js/vendor/mandrill.min.js"></script>
+    <script src="../js/vendor/jquery.serializeJSON.min.js"></script>
+    <script src="../js/vendor/html2canvas.js"></script>
+    
+    <script src="../js/auth.js"></script>
+    <script src="../js/sendMail.js"></script>
+    <script src="../js/realtime.js"></script>
+    <script src="../js/render.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/nw.js"></script>
+</head>
+<body>
+<div id="main-view" class="container">
+  <h1 id="logo">COMPANY NAME</h1>
+  <div id="main" data-autoload="start.html" data-target="#main">
+  </div>
+</div>
+<div class="navigation-wrapper">
+  <div id="navigation" class="visuallyhidden navigation" data-autoload="partial/menu.html" data-target="#navigation"></div>
+</div>
+<div class="thanks-wrapper">
+  <div id="thanks" class="visuallyhidden thanks" data-autoload="partial/thanks.html" data-target="#thanks"></div>
+</div>
+</body>
+</html>

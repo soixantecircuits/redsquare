@@ -1,0 +1,130 @@
+*{
+  background: transparent;
+}
+::selection{
+  background: transparent;
+}
+html,body{
+  background: black;
+  color:white;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+h1{
+  text-align: center;
+  background: transparent;
+  margin: 0px;
+}
+
+.bordered{
+  border-top:9px #26191b solid;
+  border-bottom:9px #26191b solid;
+  background: #3a2d2f;
+  color:#fffaf7;
+}
+
+.align-vertical {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  -webkit-flex-flow: row wrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  -webkit-flex-align: center; 
+  -webkit-align-items: center;
+}
+
+.align-vertical > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+
+.big_banner{
+  width: 100%;
+  height:236px;
+  text-align: center;
+}
+
+.big_banner .ru{
+  font-size:53px;
+  width: 100%;
+}
+.big_banner .en{
+  font-size:29px;
+  width: 100%;
+}
+
+.flex-item {
+  background: transparent;
+  width: 200px;
+  text-align: center;
+}
+
+.navigation-wrapper{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  background: #3a2d2f;
+}
+
+.navigation {
+  list-style: none;
+  margin: 0;   
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  align-items: center;
+  text-align: center;
+  -webkit-flex-align: center; 
+  -webkit-align-items: center;
+  justify-content: center;
+  height: 200px;
+  overflow:hidden;
+}
+.navigation > * {
+  padding: 10px 10px 0px 10px;
+  flex: 1;
+  -webkit-box-flex: 1;
+  height: 100%;
+  text-align: center;
+}
+
+.navigation .button{
+  background:#3a2d2f;
+  text-align: center;
+  vertical-align: center;
+}
+
+.container{
+  width: 1080px;
+  height: 1080px;
+  background: transparent;
+  display: block;
+  margin: 0px auto;
+}
+
+#main form{
+  margin:0 auto;
+  width: 1024px;
+  text-align: center;
+}
+
+input{
+  color:white;
+}
+
+#thanks{
+  top: 0px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  margin: 10% 0;
+}
