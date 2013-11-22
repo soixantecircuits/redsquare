@@ -82,11 +82,13 @@ var hideUserPicture = function(){
 
 var showForm = function(){
   showDynamic("form");
+  initKeyboard();
 };
 
 
 var restart = function(){
   hideDynamic("#thanks");
+  $(".keyboard").remove();
   $("#main").load("start.html", function(data) {
       customload(data);
   });
