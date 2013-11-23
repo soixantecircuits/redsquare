@@ -5,7 +5,7 @@
 <div class="control-group">
   <label class="control-label" for="name">Name</label>
   <div class="controls">
-    <input id="name" name="name" type="text" placeholder="Name" class="input-xlarge">
+    <input id="name" name="name" type="text" placeholder="Name" class="input-xlarge" data-validation="length" data-validation-length="min2">
   </div>
 </div>
 
@@ -13,7 +13,7 @@
 <div class="control-group">
   <label class="control-label" for="lastname">Last name</label>
   <div class="controls">
-    <input id="lastname" name="lastname" type="text" placeholder="Last name" class="input-xlarge">
+    <input id="lastname" name="lastname" type="text" placeholder="Last name" class="input-xlarge" data-validation="length" data-validation-length="min2">
   </div>
 </div>
 
@@ -21,7 +21,7 @@
 <div class="control-group">
   <label class="control-label" for="email">Your e-mail</label>
   <div class="controls">
-    <input id="email" name="email" type="text" placeholder="email@domain.com" class="input-xlarge">
+    <input id="email" name="email" type="text" placeholder="email@domain.com" class="input-xlarge" data-validation="email">
   </div>
 </div>
 
@@ -36,7 +36,7 @@
 <div class="control-group">
   <div class="controls">
     <label class="checkbox inline" for="checkboxes-0">
-      <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1234">
+      <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1234" checked>
       J'accepte les conditions
     </label>
   </div>

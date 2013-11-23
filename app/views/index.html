@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/html5bp.css">
     <link rel="stylesheet" href="../css/animation.css">
     <link rel="stylesheet" href="../css/keyboard.css">
+    <link rel="stylesheet" href="../css/modal.css">
     <link rel="stylesheet" href="../css/main.css">
 
     <script src="../js/settings.js"></script>
@@ -17,12 +18,17 @@
     <script src="../js/vendor/mandrill.min.js"></script>
     <script src="../js/vendor/jquery.serializeJSON.min.js"></script>
     <script src="../js/vendor/html2canvas.js"></script>
+    <script src="../js/vendor/jquery.form-validator.min.js"></script>
     <script src="../js/vendor/keyboard/jquery.keyboard/jquery.keyboard.js"></script>
     <script src="../js/vendor/keyboard/jquery.keyboard/keyboards/azerty.js"></script>
     <script src="../js/vendor/keyboard/jquery.keyboard/keyboards/qwerty.js"></script>
     <script src="../js/vendor/keyboard/jquery.keyboard/plugins/form.js"></script>
     <script src="../js/vendor/keyboard/jquery.selection.js"></script>
-    
+    <script src="../js/vendor/modal/classie.js"></script>
+    <script src="../js/vendor/modal/cssParser.js"></script>
+    <script src="../js/vendor/modal/jquery.modalEffects.js"></script>
+
+    <script src="../js/plugins.js"></script>    
     <script src="../js/auth.js"></script>
     <script src="../js/sendMail.js"></script>
     <script src="../js/realtime.js"></script>
@@ -43,5 +49,15 @@
 <div class="thanks-wrapper">
   <div id="thanks" class="visuallyhidden thanks" data-autoload="partial/thanks.html" data-target="#thanks"></div>
 </div>
+<div class="md-modal md-effect-12" id="modal">
+            <div class="md-content">
+                <h3>Modal Dialog</h3>
+                <div class="md-text">
+                    <p>This is a modal window. You can do the following things with it:</p>
+                    <button class="md-close">OK, thanks</button>
+                </div>
+            </div>
+</div>
+<div class="md-overlay"></div>
 </body>
 </html>

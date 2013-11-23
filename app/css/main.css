@@ -1,5 +1,11 @@
 *{
   background: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 ::selection{
   background: transparent;
@@ -11,6 +17,12 @@ html,body{
   padding: 0px;
   height: 100%;
   width: 100%;
+}
+
+#main{
+  height: 100%;
+  width:100%;
+  position: relative;
 }
 
 h1{
@@ -25,26 +37,6 @@ h1{
   background: #3a2d2f;
   color:#fffaf7;
 }
-
-.align-vertical {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  -webkit-flex-flow: row wrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  -webkit-flex-align: center; 
-  -webkit-align-items: center;
-}
-
-.align-vertical > * {
-  padding: 10px;
-  flex: 1 100%;
-}
-
 
 .big_banner{
   width: 100%;
@@ -69,9 +61,8 @@ h1{
 
 .navigation-wrapper{
   position: absolute;
-  bottom: 0px;
+  bottom: 25px;
   width: 100%;
-  background: #3a2d2f;
 }
 
 .navigation {
@@ -110,6 +101,26 @@ h1{
   display: block;
   margin: 0px auto;
 }
+ul#start{
+  margin: 0px;
+  padding: 0px;
+}
+ul#start li{
+list-style: none;
+}
+
+ul#start li:first-child{
+  margin-top:55px;
+}
+
+.pull-right-next{
+  position: absolute;
+  right: 63px;
+  top: 90px;
+  background: url(../img/next.png);
+  width:35px;
+  height:60px; 
+}
 
 #main form{
   margin:0 auto;
@@ -127,4 +138,93 @@ input{
   text-align: center;
   width: 100%;
   margin: 10% 0;
+}
+
+#shoot-icon{
+  margin:30px auto 0 auto;
+  background: url(../img/camera.png);
+  width: 72px;
+  height:72px;
+  display: block;
+}
+
+#reshoot-icon{
+  margin:32px auto 0 auto;
+  background: url(../img/retake.png);
+  width: 70px;
+  height:70px;
+  display: block;
+}
+
+#send-icon{
+  margin:32px auto 0 auto;
+  background: url(../img/send.png);
+  width: 70px;
+  height:70px;
+  display: block;
+}
+
+.separator{
+  width: 20%;
+  margin: 0 auto;
+}
+
+.logo-place{
+  background: url(../img/logo.png);
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-position: center;
+  background-size: 25%;
+  background-repeat: no-repeat;
+}
+
+#shoot.active, #reshoot.active{
+  background: rgba(125,100,85, 0.74);
+}
+
+#shoot.disable, #reshoot.disable{
+  background: rgba(125,100,85, 0.74);
+}
+
+#send.disable {
+  background: rgba(64, 46, 48, 0.74); 
+}
+
+.counting{
+  margin:0px;
+  background: rgba(32,24,24, 0.88);
+}
+
+.md-modal p{
+  text-align: center;
+}
+
+#countdown{
+  height: 130px;
+  width: 130px;
+  margin: 26px auto;
+  font-size: 99px;
+  border: 1px solid;
+  border-radius: 100%;
+}
+
+button {
+  border: none;
+  padding: 0.6em 1.2em;
+  background: #c0392b;
+  color: #fff;
+  font-family: 'Lato', Calibri, Arial, sans-serif;
+  font-size: 1em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  margin: 3px 2px;
+  border-radius: 2px;
+}
+
+.form-error .help-block{
+  clear: both;
+  display: block;
 }

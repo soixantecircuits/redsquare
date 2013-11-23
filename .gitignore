@@ -4,3 +4,4 @@ node_modules/
 */node_modules/
 dist/
 app/js/auth.js
+app/css/themes/

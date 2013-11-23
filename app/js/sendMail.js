@@ -3,11 +3,17 @@ var m = new mandrill.Mandrill(auth.API_KEY);
 
 // create a variable for the API call parameters
 var params = {
+    "template_name": auth.template_name,
+    "template_content": [
+    ],
     "message": {
+        "headers": {
+            "Reply-To": auth.reply_to
+        },
         "from_email":auth.sender,
         "to":[],
-        "subject": "You've been shot !",
-        "html": '<img src="cid:SHOOT"> <p>Hey *|NAME|* *|LASTNAME|*, how goes ?.</p>',
+        "subject": auth.subject,
+        "html": '',
         "autotext":true,
         "track_opens":true,
         "track_clicks":true,
@@ -21,6 +27,11 @@ function sendTheMail(el) {
     params.message.to = [];
     params.message.merge_vars = [];
     params.message.images = [];
+    params.message.attachments = [{
+        "name": "ameduvoyage.jpg",
+        "type": "image/jpeg",
+        "content": imageToBeSent.content
+    }];
 
     var to = {"email":el.email};
     var merge_vars = {
@@ -40,7 +51,7 @@ function sendTheMail(el) {
     params.message.merge_vars.push(merge_vars);
     params.message.images.push(imageToBeSent);
 
-    m.messages.send(params, function(res) {
+    m.messages.sendTemplate(params, function(res) {
         console.log(res);
     }, function(err) {
         console.error(err);
