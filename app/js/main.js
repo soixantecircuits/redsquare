@@ -3,17 +3,23 @@
 var imageToBeSent = {};
 var restartDelay = 2000;
 var app = {
-  shouldShoot: true,
+  shouldShoot: false,
   menuHidden: true,
   timer: 0,
   timerAction: '',
   autoLoadPartial: 0,
-  count:0
+  count:0,
+  timeOutPhotoAction:'',
+  timeoutPhoto: 4000
 };
 
 
 var displayImage = function(src) {
-  $("#main-view").backstretch(src);
+  $(".progress").animate({width:"100%"}, 500,function(){
+    hideDynamic("#load");
+    $(".progress").css({width:"0%"});
+    $("#main-view").backstretch(src);  
+  }); 
 }
 
 var hideDynamic = function(el) {
@@ -27,6 +33,7 @@ var showDynamic = function(el) {
 }
 
 var reshoot = function() {
+  $(".progress").css({width:"0%"});
   togglesShoot();
   $("#main").load("picture.html", function(data) {
     customload(data);
@@ -50,6 +57,11 @@ var startCountdown = function() {
   $("#countdown").html(seconds);
   setTimeout(function() {
     sendShoot();
+    loadPhotoProgress();
+    app.timeOutPhotoAction = setTimeout(function(){
+      hideDynamic("#load");
+      showInfo("Oops", "Something went wrong with the photo, please try again !");
+    }, app.timeoutPhoto);
   }, seconds * 1000);
 }
 
@@ -121,8 +133,15 @@ var customload = function(data) {
   app.count++;
   if (app.count == app.autoLoadPartial) {
       $('.md-trigger').modalEffects('init');
-      $(window).resize();
   }
+  $(window).resize();
+}
+
+var loadPhotoProgress = function(){
+  $("#load").hide().removeClass("visuallyhidden").fadeIn(1000);
+  $(".progress").animate({width:"60%"}, 1000,function(){
+    $(".progress").animate({width:"70%"}, 20000);
+  });
 }
 
 var hideUserPicture = function() {

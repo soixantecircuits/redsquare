@@ -228,3 +228,41 @@ button {
   clear: both;
   display: block;
 }
+
+#load{
+  position: absolute;
+  top: 0;
+  text-align: center;
+  background: black;
+  width: 100%;
+  height: 100%;
+  padding-top: 26%;
+}
+
+#loading{
+  width:400px;
+  margin: 10px auto;
+}
+
+#loading .total{
+  width: 100%;
+  background: white;
+  border:1px solid black;
+  height: 2px;
+}
+
+#loading .progress{
+  float: left;
+  width: 0%;
+  height: 100%;
+  background: rgba(165,152,152,1);
+}
+
+#loading .light{
+  float: left;
+  width: 1%;
+  height: 100%;
+  background: rgba(165, 152, 152, 0.58);
+  -webkit-box-shadow: 0px 0px 29px 12px rgba(255, 224, 190, 0.55);
+  margin-left: -1%;
+}
